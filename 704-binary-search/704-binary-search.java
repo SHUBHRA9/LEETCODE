@@ -7,18 +7,15 @@ class Solution {
        while( high >= low)
        {
           mid= (high + low)/2;
-           if( nums[mid] == target)
-           {
+           if( nums[mid] == target){
                return mid;
            }
            else
            {
-               if( nums[mid] < target)
-               {
+               if( nums[mid] < target){
                    low = mid+1;
                }
-               else if( target < nums[mid])
-               {
+               else if( target < nums[mid]){
                    high = mid - 1;
                }
            }
