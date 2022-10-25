@@ -1,12 +1,12 @@
 class Solution {
-    public int strStr(String a, String b) {
-       int n = a.length();
-        int m = b.length();
+    public int strStr(String haystack, String needle) {
+       int n = haystack.length();
+        int m = needle.length();
         if(n < m) {return -1;}
         for(int i = 0; i <= n-m; i++) {
           int j;
           for(j = 0; j < m; j++) {
-            if(a.charAt(i+j) != b.charAt(j)) {
+            if(haystack.charAt(i+j) != needle.charAt(j)) {
               break;
             }
           }
