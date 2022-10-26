@@ -37,10 +37,10 @@ class Solution {
                 }else if(j==0){
                    arr[i][j] = arr[i-1][j] + 1;
                 }else{
-                    char c1 = s.charAt(i-1);
-                    char c2 = t.charAt(j-1);
+                    char ch1 = s.charAt(i-1);
+                    char ch2 = t.charAt(j-1);
                     
-                    if(c1==c2)
+                    if(ch1==ch2)
                         arr[i][j] = arr[i-1][j-1];
                     else
                         arr[i][j] = 1 + Math.min(arr[i-1][j-1],Math.min(arr[i-1][j],arr[i][j-1]));
