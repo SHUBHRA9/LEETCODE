@@ -31,15 +31,15 @@ class Solution
 {
     public static boolean isRotated(String str1, String str2)
     {
-       String s="";
+       String str="";
 
-        s=str1.substring(2)+str1.substring(0,2);
+        str=str1.substring(2)+str1.substring(0,2);
 
-        String s2="";
+        String str3="";
 
-        s2=str1.substring(str1.length()-2)+str1.substring(0,str1.length()-2);
+        str3=str1.substring(str1.length()-2)+str1.substring(0,str1.length()-2);
 
-        if(s.equals(str2)|| s2.equals(str2))
+        if(str.equals(str2)|| str3.equals(str2))
 
             return true;
 
