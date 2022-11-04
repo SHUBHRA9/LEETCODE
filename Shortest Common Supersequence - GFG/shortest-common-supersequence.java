@@ -34,9 +34,6 @@ class GFG {
 }
 // } Driver Code Ends
 
-
-//User function Template for Java
-
 class Solution
 {
     //Function to find length of shortest common supersequence of two strings.
@@ -48,14 +45,14 @@ class Solution
            for(int j = 0 ; j <= n ;j++){
                if(i == 0|| j== 0){
                    arr[i][j]= 0;
-               }else{
-                   if(X.charAt(i-1) == Y.charAt(j-1) ){
-                   arr[i][j] = arr[i-1][j-1]+1;
-                   
-                   
-               }else{
-                   arr[i][j] = Math.max(arr[i-1][j] , arr[i][j-1]);
                }
+               else{
+                   if(X.charAt(i-1) == Y.charAt(j-1) ){
+                        arr[i][j] = arr[i-1][j-1]+1;
+                   }
+                    else{
+                        arr[i][j] = Math.max(arr[i-1][j] , arr[i][j-1]);
+                    }
                }
                
            }
