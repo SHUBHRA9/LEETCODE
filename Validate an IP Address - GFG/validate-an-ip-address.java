@@ -26,10 +26,13 @@ import java.io.*;
 }
 // } Driver Code Ends
 
+
+// User function Template for Java
+
 class Solution {
+
     public boolean isValid(String s) {
-        
-    if(s.charAt(0) == '.' || s.charAt(s.length()-1) ==  '.')return false;
+        if(s.charAt(0) == '.' || s.charAt(s.length()-1) ==  '.')return false;
     String[] str = s.split("\\.");
     if(str.length != 4)return false;        
 
@@ -52,5 +55,4 @@ class Solution {
         }
     return true;
     }
-
- }
+}
