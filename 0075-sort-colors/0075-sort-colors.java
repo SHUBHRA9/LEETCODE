@@ -1,0 +1,24 @@
+class Solution {
+    public void sortColors(int[] nums) {
+        int i = -1;
+        int n= nums.length;
+        int ans = 0;
+        while (ans < n) {
+            if (nums[ans] == 0) {
+                swap(nums, ans++, ++i);
+            } 
+            else if (nums[ans] == 1) {
+                ++ans;
+            } 
+            else {
+                swap(nums, ans, --n);
+            }
+        }
+    }
+
+    private void swap(int[] nums, int i, int n) {
+        int x = nums[i];
+        nums[i] = nums[n];
+        nums[n] = x;
+    }
+}
